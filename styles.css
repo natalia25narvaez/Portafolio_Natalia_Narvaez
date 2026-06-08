@@ -1,0 +1,437 @@
+CSS    /* ==========================================================================
+   1. REGLAS GENERALES Y RESETEO
+   ========================================================================== */
+
+/* Reseteo básico para estandarizar márgenes, rellenos y el cálculo de dimensiones */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración de la tipografía base y comportamiento de desplazamiento suave */
+html {
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    color: #2C3E50; /* Color principal oscuro aplicado al texto general */
+}
+
+/* Contenedor fijo centrado con márgenes laterales automáticos para maquetación limpia */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Espaciado vertical generoso y uniforme aplicado a todas las secciones principales */
+section {
+    padding: 100px 0;
+}
+
+/* Estilo estandarizado para los títulos de cada sección del portafolio */
+.titulo-seccion {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Párrafo genérico para mantener coherencia en bloques de texto */
+.texto-lorem {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVEGACIÓN
+   ========================================================================== */
+
+/* Barra de navegación superior con fondo principal oscuro */
+.sitio-header {
+    background-color: #852563;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Flexbox para alinear el logo a la izquierda y el menú a la derecha */
+.header-bloque {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Placeholder cuadrado y minimalista para el logotipo */
+.logotipo {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+    border-radius: 1px;
+}
+
+/* Contenedor de enlaces de navegación con separación horizontal */
+.navegacion-principal {
+    display: flex;
+    gap: 30px;
+}
+
+/* Estilo de los enlaces del menú con transición suave para interacción */
+.navegacion-principal a {
+    color: #ECF0F1; /* Color claro 1 */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover que cambia el color del enlace al pasar el puntero */
+.navegacion-principal a:hover {
+    color: #e694c9; /* Color de acento */
+}
+
+/* ==========================================================================
+   3. SECCIÓN HERO (INICIO)
+   ========================================================================== */
+
+/* Fondo claro 2 aplicado a la presentación inicial */
+.seccion-hero {
+      background-image: url("https://i.pinimg.com/1200x/b7/e7/c0/b7e7c0813b0eb358bc4939cca847c821.jpg");
+}
+
+/* Distribución en dos columnas simétricas usando Flexbox */
+.hero-bloque {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Columna de texto configurada para ocupar la mitad del espacio */
+.hero-columna-texto {
+    flex: 1;
+}
+
+/* Título de introducción con jerarquía visual fuerte */
+.hero-columna-texto h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #852563;
+}
+
+/* Subtítulo enfocado en la especialidad técnica */
+.hero-columna-texto h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #34495E; /* Color secundario medio */
+    margin-bottom: 30px;
+}
+
+/* Botón de llamada a la acción con transiciones y sombras */
+.boton-accion {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #852563; /* Color de acento */
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto hover que eleva levemente el botón y altera su tonalidad */
+.boton-accion:hover {
+    background-color: #ffffff;
+    color: #852563;
+    transform: translateY(-3px);
+}
+
+/* Columna derecha adaptada para centrar la imagen */
+.hero-columna-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Fotografía de perfil con máscara perfectamente circular y bordes suaves */
+.foto-perfil {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #852563;
+}
+
+/* ==========================================================================
+   4. SECCIÓN SOBRE MÍ
+   ========================================================================== */
+
+/* Fondo alternado con color claro 1 para segmentación visual */
+.seccion-sobre-mi {
+    background-color: #ffffff;
+    color: #852563;
+}
+
+/* ==========================================================================
+   5. SECCIÓN PROYECTOS
+   ========================================================================== */
+
+/* Fondo configurado con color claro 2 */
+.seccion-proyectos {
+    background-image: url(https://i.pinimg.com/webp/1200x/6d/6b/f9/6d6bf9bf675c6697f8969d58255f9202.webp);
+}
+
+/* Grid flexible mediante Flexbox que distribuye 3 tarjetas de forma equidistante */
+.proyectos-rejilla {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Diseño individualizado de cada tarjeta con bordes redondeados y sombras difuminadas */
+.tarjeta-proyecto {
+    background-color: #FFFFFF;
+    flex: 1;
+    min-width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ECF0F1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto dinámico al posar el cursor sobre la tarjeta de proyecto */
+.tarjeta-proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen superior de la tarjeta adaptada al contenedor */
+.proyecto-imagen {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Contenedor interno para los textos descriptivos del proyecto */
+.proyecto-contenido {
+    padding: 25px;
+}
+
+.proyecto-contenido h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #2C3E50;
+}
+
+.proyecto-contenido p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #34495E;
+}
+
+/* ==========================================================================
+   6. SECCIÓN HABILIDADES
+   ========================================================================== */
+.titulo-seccion {
+    color: #852563;
+
+}
+/* Fondo alternado usando color claro 1 */
+.seccion-habilidades {
+       background-image: url("https://i.pinimg.com/1200x/b7/e7/c0/b7e7c0813b0eb358bc4939cca847c821.jpg");
+}
+
+/* Flexbox estructurado para organizar las 4 tarjetas en una sola fila horizontal */
+.habilidades-rejilla {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas simples con alto contraste cromático respecto al fondo de la sección */
+.tarjeta-habilidad {
+    background-color: #FFFFFF; /* Fondo que contrasta */
+    flex: 1;
+    min-width: 220px;
+    padding: 30px 20px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #2C3E50;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto interactivo sutil que invierte tonalidades */
+.tarjeta-habilidad:hover {
+    background-color: #852563;
+    color: #FFFFFF;
+}
+
+/* ==========================================================================
+   7. SECCIÓN CONTACTO
+   ========================================================================== */
+
+/* Fondo configurado con color claro 2 */
+.seccion-contacto {
+    background-color: #FFFFFF;
+    color: #852563;
+}
+
+/* Estructuración en dos columnas asimétricas mediante Flexbox */
+.contacto-bloque {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+/* Bloque informativo de llamada a la acción */
+.contacto-columna-texto {
+    flex: 1;
+}
+
+.contacto-columna-texto h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #852563;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.contacto-columna-texto p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #34495E;
+}
+
+/* Bloque derecho destinado íntegramente al formulario */
+.contacto-columna-formulario {
+    flex: 1;
+    width: 100%;
+}
+
+/* Contenedor del formulario con espaciado interno */
+.formulario-contacto {
+    background-color: #ECF0F1; /* Fondo suave para enmarcar inputs */
+    padding: 40px;
+    border-radius: 12px;
+}
+
+/* Separación controlada entre cada campo del formulario */
+.grupo-formulario {
+    margin-bottom: 20px;
+}
+
+/* Etiquetas de formulario en bloque sobre los campos de entrada */
+.grupo-formulario label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #852563;
+}
+
+/* Estilización unificada para inputs de texto y áreas de mensaje */
+.grupo-formulario input,
+.grupo-formulario textarea {
+    width: 100%;
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    border: 1px solid #BDC3C7;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Resaltado cromático cuando el usuario hace foco en un input */
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus {
+    border-color: #852563;
+}
+
+/* Bloqueo del redimensionamiento horizontal en el área de texto */
+.grupo-formulario textarea {
+    resize: vertical;
+}
+
+/* Botón de envío que hereda el color de acento */
+.boton-formulario {
+    width: 100%;
+    padding: 16px;
+    background-color: #852563;
+    color: #FFFFFF;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Cambio de color controlado en estado hover */
+.boton-formulario:hover {
+    background-color: #ffffff;
+    color: #852563;
+}
+
+/* ==========================================================================
+   8. PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+
+/* Cierre de página con el fondo principal oscuro */
+.sitio-footer {
+    background-color: #852563;
+    padding: 40px 0;
+}
+
+/* Flexbox alineado para separar el copyright de los accesos sociales */
+.footer-bloque {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para el texto de propiedad intelectual */
+.texto-copyright {
+    color: #ECF0F1;
+    font-size: 0.9rem;
+}
+
+/* Contenedor horizontal para enlaces a redes */
+.redes-sociales {
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilo textual limpio para cada enlace social */
+.enlace-red {
+    color: #ECF0F1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Resalte visual con el color de acento al pasar el puntero */
+.enlace-red:hover {
+    color: #3498DB;
+ }   
